@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Menu Horizontal</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu ul li {
+        display: inline-block;
+        list-style: none;
+        background-color: rgb(23, 112, 112);
+        color: white;
+        float: left;
+        /* padding: 10px; */
+        /* width: 200px; */
+        width: 20%;
+        /* height: 40px; */
+        height: 10%;
+        border: 1px solid gray;
+        text-align: center;
+        font-size: 20px;
+        text-decoration: none;
+        line-height: 39px;
+        position: relative;
+      }
+
+      .menu ul li:hover {
+        transition: 1.5s;
+        background-color: rgb(39, 38, 38);
+      }
+
+      .menu ul {
+        padding: 0;
+      }
+
+      .menu ul ul {
+        display: none;
+      }
+
+      .menu ul ul li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menu ul li:hover > ul {
+        display: block;
+      }
+
+      .menu ul ul ul {
+        position: absolute;
+        /* margin-left: 200px; */
+        width: 100%;
+        margin-left: 101%;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <ul>
+        <li>Argentina</li>
+        <li>
+          Brasil
+          <ul>
+            <li>Norte</li>
+            <li>
+              Nordeste
+              <ul>
+                <li>Bahia</li>
+                <li>Pernambuco</li>
+                <li>Sergipe</li>
+                <li>Alagoas</li>
+              </ul>
+            </li>
+            <li>Centro-Oeste</li>
+            <li>
+              Sudeste
+              <ul>
+                <li>São Paulo</li>
+                <li>Rio de Janeiro</li>
+                <li>Minas Gerais</li>
+                <li>Espirito Santo</li>
+              </ul>
+            </li>
+            <li>Sul</li>
+          </ul>
+        </li>
+        <li>Alemanha</li>
+        <li>França</li>
+      </ul>
+    </nav>
+  </body>
+</html>
